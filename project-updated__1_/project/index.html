@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ForHerWellbeing | Root-Cause Women's Wellness</title>
+<meta name="description" content="Science-based holistic wellness for women, led by Dr. Raga Deepthi Ediga. Yoga, diet coaching and gut metabolism reset programs.">
+<style>
+:root{
+  --plum:#3B1530;
+  --plum-ink:#26101F;
+  --plum-mid:#6C3159;
+  --plum-soft:#EADFE3;
+  --cream:#F6EFE1;
+  --white:#FFFFFF;
+  --ink:#2A2621;
+  --ink-soft:#6B655C;
+  --line:#DED0C0;
+  --serif:'Iowan Old Style','Palatino Linotype', Georgia, 'Times New Roman', serif;
+  --sans:-apple-system, BlinkMacSystemFont,'Segoe UI', Helvetica, Arial, sans-serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--white);color:var(--ink);
+  font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+h1,h2,h3{font-family:var(--serif);color:var(--plum);margin:0;font-weight:400;letter-spacing:-0.01em;}
+p{margin:0;}
+
+/* ---- Header ---- */
+header{
+  position:sticky;top:0;z-index:50;background:rgba(246,239,225,0.94);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--line);
+}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:var(--maxw);margin:0 auto;}
+.wordmark{font-family:var(--serif);font-size:1.3rem;color:var(--plum);text-decoration:none;}
+.wordmark em{font-style:normal;color:var(--plum-mid);}
+nav{display:flex;align-items:center;gap:34px;}
+nav a{font-size:0.92rem;text-decoration:none;color:var(--ink);position:relative;padding:4px 0;}
+nav a:not(.cta):after{
+  content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--plum);
+  transition:width .25s ease;
+}
+nav a:not(.cta):hover:after{width:100%;}
+.cta{
+  background:var(--plum);color:var(--white)!important;padding:11px 22px;
+  border-radius:2px;font-size:0.88rem;text-decoration:none;
+}
+.cta:hover{background:var(--plum-mid);}
+.nav-toggle{display:none;background:none;border:0;font-size:1.4rem;color:var(--plum);}
+
+/* ---- Hero ---- */
+.hero{position:relative;overflow:hidden;background:var(--cream);padding:96px 0 0;}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:0 32px;
+  display:grid;grid-template-columns:1.05fr 0.95fr;gap:20px;align-items:center;
+}
+.hero-eyebrow{font-size:0.95rem;color:var(--plum-mid);margin-bottom:22px;max-width:38ch;}
+.hero h1{font-size:clamp(2.5rem,4.6vw,4rem);line-height:1.06;max-width:14ch;}
+.hero-sub{margin-top:26px;font-size:1.14rem;color:var(--ink-soft);max-width:42ch;}
+.hero-actions{margin-top:34px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:15px 30px;border-radius:2px;text-decoration:none;
+  font-size:0.96rem;font-weight:600;
+}
+.btn-primary{background:var(--plum);color:var(--white);}
+.btn-primary:hover{background:var(--plum-mid);}
+.hero-link{font-size:0.92rem;color:var(--plum);text-decoration:underline;text-underline-offset:3px;}
+.credentials{display:flex;gap:28px;margin-top:56px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.credential .label{font-size:0.8rem;color:var(--ink-soft);text-transform:none;}
+.credential .value{font-family:var(--serif);font-size:1.05rem;color:var(--plum);}
+
+.hero-art{position:relative;height:100%;min-height:420px;}
+.hero-art svg{width:100%;height:auto;position:relative;}
+
+/* ---- Problem ---- */
+.problem{padding:110px 0 90px;}
+.problem-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;}
+.problem h2{font-size:clamp(1.9rem,3.2vw,2.6rem);max-width:12ch;}
+.problem-copy p{color:var(--ink-soft);font-size:1.05rem;max-width:52ch;margin-bottom:18px;}
+.problem-copy p:last-child{margin-bottom:0;}
+.problem-copy strong{color:var(--plum);font-weight:600;}
+
+/* ---- Pillars ---- */
+.pillars-section{background:var(--plum-ink);color:var(--white);padding:100px 0;}
+.pillars-head{max-width:56ch;margin-bottom:56px;}
+.pillars-head h2{color:var(--white);font-size:clamp(1.9rem,3.2vw,2.6rem);}
+.pillars-head p{color:#CDB5C4;margin-top:16px;font-size:1.05rem;}
+.pillar-list{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.14);}
+.pillar{background:var(--plum-ink);padding:32px 26px;}
+.pillar .n{font-family:var(--serif);font-size:0.9rem;color:#A57A97;margin-bottom:20px;}
+.pillar h3{color:var(--white);font-size:1.2rem;margin-bottom:10px;}
+.pillar p{color:#C9B2C1;font-size:0.92rem;}
+
+/* ---- Programs ---- */
+.programs{padding:110px 0;}
+.programs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:52px;flex-wrap:wrap;}
+.programs-head h2{font-size:clamp(1.9rem,3.2vw,2.6rem);max-width:14ch;}
+.programs-head p{color:var(--ink-soft);max-width:38ch;font-size:1rem;}
+.program-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);}
+.program{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:38px 32px;display:flex;flex-direction:column;min-height:280px;}
+.program:last-child{border-right:none;}
+.program .tag{font-size:0.8rem;color:var(--ink-soft);margin-bottom:20px;}
+.program h3{font-size:1.4rem;margin-bottom:10px;}
+.program .price{font-family:var(--serif);color:var(--plum);font-size:1.5rem;margin-bottom:16px;}
+.program p.desc{color:var(--ink-soft);font-size:0.96rem;margin-bottom:24px;}
+.program a{margin-top:auto;font-size:0.92rem;color:var(--plum);text-decoration:none;border-bottom:1px solid var(--plum);padding-bottom:2px;align-self:flex-start;}
+.program a:hover{color:var(--plum-mid);border-color:var(--plum-mid);}
+
+/* ---- Proof ---- */
+.proof{background:var(--cream);padding:100px 0;}
+.proof-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:center;}
+.quote{
+  font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.05rem);color:var(--plum);
+  line-height:1.4;max-width:22ch;
+}
+.quote-attr{margin-top:22px;font-size:0.9rem;color:var(--ink-soft);font-family:var(--sans);}
+.stat-col{display:flex;flex-direction:column;gap:30px;border-left:1px solid var(--line);padding-left:44px;}
+.stat .num{font-family:var(--serif);font-size:2.4rem;color:var(--plum);line-height:1;}
+.stat .label{font-size:0.9rem;color:var(--ink-soft);margin-top:6px;}
+
+/* ---- Waitlist ---- */
+.waitlist{padding:70px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.waitlist-inner{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;}
+.waitlist h3{font-size:1.3rem;margin-bottom:8px;}
+.waitlist p{color:var(--ink-soft);font-size:0.94rem;max-width:44ch;}
+.waitlist form{display:flex;gap:0;border-bottom:1px solid var(--plum);min-width:320px;}
+.waitlist input{flex:1;border:none;background:none;padding:10px 4px;font-size:0.96rem;font-family:var(--sans);}
+.waitlist input:focus{outline:none;}
+.waitlist button{background:none;border:none;color:var(--plum);font-weight:600;font-size:0.92rem;cursor:pointer;padding:10px 4px;}
+
+/* ---- Final CTA ---- */
+.final-cta{padding:120px 0;text-align:center;}
+.final-cta h2{font-size:clamp(2rem,4vw,2.9rem);max-width:18ch;margin:0 auto 22px;}
+.final-cta p{color:var(--ink-soft);max-width:44ch;margin:0 auto 36px;font-size:1.05rem;}
+
+/* ---- Footer ---- */
+footer{background:var(--plum-ink);color:#D9C4D0;padding:64px 0 30px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;}
+footer h4{color:var(--white);font-family:var(--sans);font-size:0.9rem;margin-bottom:16px;font-weight:600;}
+footer a{color:#D9C4D0;text-decoration:none;font-size:0.9rem;display:block;margin-bottom:10px;}
+footer a:hover{color:var(--white);}
+.footer-bottom{
+  max-width:var(--maxw);margin:44px auto 0;padding:22px 32px 0;border-top:1px solid rgba(255,255,255,0.14);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.8rem;color:#B79AAC;
+}
+
+/* ---- WhatsApp float ---- */
+.wa-float{
+  position:fixed;right:26px;bottom:26px;z-index:80;width:54px;height:54px;border-radius:50%;
+  background:#2E6B3E;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+.wa-float svg{width:24px;height:24px;}
+
+/* ---- Reveal ---- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(max-width:920px){
+  .hero-inner,.problem-grid,.proof-grid{grid-template-columns:1fr;}
+  .hero-art{order:-1;min-height:260px;margin-bottom:20px;}
+  .pillar-list{grid-template-columns:1fr 1fr;}
+  .program-list{grid-template-columns:1fr;}
+  .program{border-right:none;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  nav{position:fixed;top:73px;left:0;right:0;bottom:0;background:var(--cream);flex-direction:column;
+    align-items:flex-start;padding:30px 32px;display:none;gap:22px;overflow:auto;}
+  nav.open{display:flex;}
+  .nav-toggle{display:block;}
+  .stat-col{flex-direction:row;flex-wrap:wrap;border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:28px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a href="index.html" class="wordmark">ForHer<em>Wellbeing</em></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Dr. Raga</a>
+      <a href="programs.html">Programs</a>
+      <a href="women-abroad.html">Women Abroad</a>
+      <a href="results.html">Results</a>
+      <a href="contact.html" class="cta">Book Discovery Call</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow reveal">A scientist, not an influencer. PhD, Heidelberg University, with an IIT Bombay association.</p>
+      <h1 class="reveal">Your body has a root cause. Dr. Raga finds it.</h1>
+      <p class="hero-sub reveal">Most women have already tried the generic diet plan. What&rsquo;s missing is the biochemical, metabolic and gut-level reason their body isn&rsquo;t responding. That&rsquo;s exactly what we find first.</p>
+      <div class="hero-actions reveal">
+        <a href="contact.html" class="btn btn-primary">Book Discovery Call: &#8377;1,000</a>
+        <a href="#programs" class="hero-link">See the programs</a>
+      </div>
+      <div class="credentials reveal">
+        <div class="credential"><div class="value">150+</div><div class="label">women treated</div></div>
+        <div class="credential"><div class="value">11 yrs</div><div class="label">clinical experience, Germany</div></div>
+        <div class="credential"><div class="value">PhD</div><div class="label">Heidelberg University</div></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#3B1530" stroke-width="1.4" stroke-linecap="round">
+          <path d="M240 40 C 240 120, 190 140, 190 210 C 190 260, 240 270, 240 320" opacity="0.85"/>
+          <path d="M240 40 C 240 120, 290 140, 290 210 C 290 260, 240 270, 240 320" opacity="0.85"/>
+          <line x1="190" y1="210" x2="290" y2="210" opacity="0.5"/>
+          <circle cx="240" cy="40" r="9" fill="#3B1530" stroke="none"/>
+          <circle cx="190" cy="210" r="7" fill="#6C3159" stroke="none"/>
+          <circle cx="290" cy="210" r="7" fill="#6C3159" stroke="none"/>
+          <circle cx="240" cy="320" r="9" fill="#3B1530" stroke="none"/>
+          <path d="M240 320 C 220 360, 150 370, 120 420" opacity="0.6"/>
+          <path d="M240 320 C 235 365, 210 390, 175 440" opacity="0.6"/>
+          <path d="M240 320 C 245 365, 260 395, 250 450" opacity="0.6"/>
+          <path d="M240 320 C 255 360, 300 375, 330 425" opacity="0.6"/>
+          <path d="M240 320 C 260 355, 320 355, 360 390" opacity="0.6"/>
+          <circle cx="120" cy="420" r="4" fill="#6C3159" stroke="none"/>
+          <circle cx="175" cy="440" r="4" fill="#6C3159" stroke="none"/>
+          <circle cx="250" cy="450" r="4" fill="#6C3159" stroke="none"/>
+          <circle cx="330" cy="425" r="4" fill="#6C3159" stroke="none"/>
+          <circle cx="360" cy="390" r="4" fill="#6C3159" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="container problem-grid">
+    <h2 class="reveal">You have tried. You are tired. Let us find why.</h2>
+    <div class="problem-copy reveal">
+      <p>PCOS, thyroid, weight that won&rsquo;t move, gut issues that won&rsquo;t settle: the advice keeps changing, but nothing has explained why <em>your</em> body isn&rsquo;t responding.</p>
+      <p>ForHerWellbeing exists to find that answer: <strong>the underlying biochemical, metabolic and gut-related root cause</strong>, instead of prescribing another generic plan you&rsquo;ve likely already tried.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pillars-section">
+  <div class="container">
+    <div class="pillars-head reveal">
+      <h2>A method built on four pillars</h2>
+      <p>Rigorous scientific analysis, paired with practical, livable lifestyle interventions. Not another fad protocol.</p>
+    </div>
+    <div class="pillar-list reveal">
+      <div class="pillar"><h3>Biochemistry</h3><p>Understanding what your body&rsquo;s markers are actually telling you.</p></div>
+      <div class="pillar"><h3>Microbiome</h3><p>Assessing gut health as a driver of hormonal and metabolic symptoms.</p></div>
+      <div class="pillar"><h3>Nutrition</h3><p>Personalized guidance based on your biology, not a generic template.</p></div>
+      <div class="pillar"><h3>Yoga</h3><p>Movement and breathwork designed for women&rsquo;s hormonal wellbeing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="container">
+    <div class="programs-head reveal">
+      <h2>Our programs</h2>
+      <p>Three focused programs, each addressing a different layer of root-cause care.</p>
+    </div>
+    <div class="program-list reveal">
+      <div class="program">
+        <div class="tag">Ongoing</div>
+        <h3>Yoga</h3>
+        <div class="price">&#8377;2,500<span style="font-size:1rem;color:var(--ink-soft);">/mo</span></div>
+        <p class="desc">Morning yoga batches focused on women&rsquo;s wellbeing.</p>
+        <a href="programs.html">View program</a>
+      </div>
+      <div class="program">
+        <div class="tag">One programme</div>
+        <h3>Diet Coaching</h3>
+        <div class="price">&#8377;30,000</div>
+        <p class="desc">Personalized nutrition and lifestyle guidance.</p>
+        <a href="programs.html">View program</a>
+      </div>
+      <div class="program">
+        <div class="tag">Flagship</div>
+        <h3>Gut Metabolism Reset</h3>
+        <div class="price">&#8377;75,000+</div>
+        <p class="desc">Premium root-cause program including microbiome sequencing.</p>
+        <a href="programs.html">View program</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="container proof-grid">
+    <div class="reveal">
+      <p class="quote">&ldquo;Padma&rsquo;s periods regulated in 20 days through diet alone. No medication.&rdquo;</p>
+      <p class="quote-attr">Client outcome, Diet Coaching program</p>
+    </div>
+    <div class="stat-col reveal">
+      <div class="stat"><div class="num">150+</div><div class="label">Women treated</div></div>
+      <div class="stat"><div class="num">11</div><div class="label">Years of clinical experience</div></div>
+      <div class="stat"><div class="num">3</div><div class="label">Focused, root-cause programs</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="waitlist">
+  <div class="container waitlist-inner">
+    <div>
+      <h3>A new product is coming</h3>
+      <p>We&rsquo;re building a supplement line rooted in the same science. Join the waitlist to hear first.</p>
+    </div>
+    <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='You are on the list';">
+      <input type="email" placeholder="Your email address" required aria-label="Email">
+      <button type="submit">Join</button>
+    </form>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2 class="reveal">Ready to find your root cause?</h2>
+    <p class="reveal">Book a 45-minute 1:1 Discovery Call with Dr. Raga.</p>
+    <a href="contact.html" class="btn btn-primary reveal">Book Discovery Call: &#8377;1,000</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4 style="font-family:var(--serif);font-size:1.1rem;color:var(--white);">ForHerWellbeing</h4>
+      <p style="color:#C9B2C1;font-size:0.9rem;max-width:32ch;">Science-based holistic wellness for women, led by Dr. Raga Deepthi Ediga. PhD, Heidelberg University, IIT Bombay association.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="about.html">About Dr. Raga</a>
+      <a href="programs.html">Programs</a>
+      <a href="women-abroad.html">Women Abroad</a>
+      <a href="results.html">Results</a>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <a href="programs.html">Yoga: &#8377;2,500/mo</a>
+      <a href="programs.html">Diet Coaching: &#8377;30,000</a>
+      <a href="programs.html">Gut Metabolism Reset: &#8377;75,000+</a>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <a href="contact.html">Book Discovery Call</a>
+      <a href="https://wa.me/918008383699">WhatsApp: +91 8008383699</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 ForHerWellbeing. All rights reserved.</span>
+    <span>Serving clients across India, and abroad</span>
+  </div>
+</footer>
+
+
+<script src="js/social.js"></script>
+
+<script>
+document.querySelectorAll('nav a').forEach(function(l){
+  l.addEventListener('click', function(){ document.querySelector('nav').classList.remove('open'); });
+});
+var els = document.querySelectorAll('.reveal');
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.15});
+els.forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>

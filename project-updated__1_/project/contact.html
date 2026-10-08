@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Discovery Call | ForHerWellbeing</title>
+<meta name="description" content="Book a 45-minute 1:1 Discovery Call with Dr. Raga Deepthi Ediga, or reach ForHerWellbeing directly by WhatsApp or email.">
+<style>
+:root{
+  --plum:#3B1530;
+  --plum-ink:#26101F;
+  --plum-mid:#6C3159;
+  --plum-soft:#EADFE3;
+  --cream:#F6EFE1;
+  --white:#FFFFFF;
+  --ink:#2A2621;
+  --ink-soft:#6B655C;
+  --line:#DED0C0;
+  --serif:'Iowan Old Style','Palatino Linotype', Georgia, 'Times New Roman', serif;
+  --sans:-apple-system, BlinkMacSystemFont,'Segoe UI', Helvetica, Arial, sans-serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+h1,h2,h3{font-family:var(--serif);color:var(--plum);margin:0;font-weight:400;letter-spacing:-0.01em;}
+p{margin:0;}
+
+header{position:sticky;top:0;z-index:50;background:rgba(246,239,225,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:var(--maxw);margin:0 auto;}
+.wordmark{font-family:var(--serif);font-size:1.3rem;color:var(--plum);text-decoration:none;}
+.wordmark em{font-style:normal;color:var(--plum-mid);}
+nav{display:flex;align-items:center;gap:34px;}
+nav a{font-size:0.92rem;text-decoration:none;color:var(--ink);position:relative;padding:4px 0;}
+nav a:not(.cta):after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--plum);transition:width .25s ease;}
+nav a:not(.cta):hover:after,nav a.active:after{width:100%;}
+.cta{background:var(--plum);color:var(--white)!important;padding:11px 22px;border-radius:2px;font-size:0.88rem;text-decoration:none;}
+.cta:hover{background:var(--plum-mid);}
+.nav-toggle{display:none;background:none;border:0;font-size:1.4rem;color:var(--plum);}
+
+/* ---- Hero ---- */
+.page-hero{background:var(--cream);padding:90px 0 70px;text-align:center;}
+.page-hero p.kicker{font-size:0.95rem;color:var(--plum-mid);margin-bottom:18px;}
+.page-hero h1{font-size:clamp(2.3rem,4.2vw,3.4rem);max-width:20ch;margin:0 auto;line-height:1.1;}
+.page-hero .lede{margin:22px auto 0;font-size:1.1rem;color:var(--ink-soft);max-width:50ch;}
+
+/* ---- Contact grid ---- */
+.contact-section{padding:100px 0;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+
+.booking-card{border:1px solid var(--line);padding:40px;}
+.booking-card .tag{font-size:0.8rem;color:var(--ink-soft);margin-bottom:14px;}
+.booking-card h2{font-size:1.6rem;margin-bottom:10px;}
+.booking-card .price{font-family:var(--serif);color:var(--plum);font-size:1.8rem;margin-bottom:22px;}
+.booking-card p.desc{color:var(--ink-soft);font-size:0.98rem;margin-bottom:26px;}
+.booking-card ul{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:12px;}
+.booking-card ul li{display:flex;gap:10px;font-size:0.94rem;color:var(--ink);align-items:flex-start;}
+.booking-card ul li svg{flex-shrink:0;margin-top:3px;}
+
+form.inquiry{display:flex;flex-direction:column;gap:20px;}
+.field label{display:block;font-size:0.85rem;color:var(--ink-soft);margin-bottom:8px;}
+.field input,.field select,.field textarea{
+  width:100%;border:1px solid var(--line);background:var(--white);padding:12px 14px;
+  font-family:var(--sans);font-size:0.96rem;color:var(--ink);border-radius:2px;
+}
+.field textarea{resize:vertical;min-height:110px;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--plum);}
+.btn{display:inline-block;padding:15px 30px;border-radius:2px;text-decoration:none;font-size:0.96rem;font-weight:600;border:none;cursor:pointer;font-family:var(--sans);}
+.btn-primary{background:var(--plum);color:var(--white);}
+.btn-primary:hover{background:var(--plum-mid);}
+.form-note{font-size:0.85rem;color:var(--ink-soft);}
+.verify-row{display:flex;gap:10px;}
+.verify-row input{flex:1;min-width:0;}
+.verify-row .btn{padding:12px 18px;white-space:nowrap;}
+.btn-secondary{background:var(--white);color:var(--plum);border:1px solid var(--plum);}
+.btn-secondary:hover:not(:disabled){background:var(--cream);}
+.btn:disabled{opacity:.55;cursor:not-allowed;}
+.verify-box{margin-top:12px;}
+.verify-box[hidden]{display:none;}
+.verify-status{font-size:0.85rem;margin-top:8px;min-height:1em;}
+.verify-status.ok{color:#2e7d32;}
+.verify-status.err{color:#c0392b;}
+.form-success{display:none;background:var(--cream);border:1px solid var(--line);padding:18px 20px;font-size:0.94rem;color:var(--plum);}
+.form-success.show{display:block;}
+
+/* ---- Direct contact strip ---- */
+.direct-contact{background:var(--plum-ink);color:var(--white);padding:80px 0;}
+.direct-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.14);}
+.direct-item{background:var(--plum-ink);padding:34px 30px;text-decoration:none;display:flex;gap:16px;align-items:flex-start;}
+.direct-item svg{flex-shrink:0;margin-top:4px;}
+.direct-item h3{color:var(--white);font-size:1.05rem;margin-bottom:6px;}
+.direct-item p{color:#C9B2C1;font-size:0.9rem;}
+.direct-item:hover p{color:var(--white);}
+
+/* ---- FAQ ---- */
+.faq{padding:100px 0;}
+.faq-head{max-width:56ch;margin-bottom:44px;}
+.faq-head h2{font-size:clamp(1.9rem,3.2vw,2.5rem);}
+.faq-item{border-top:1px solid var(--line);padding:26px 0;}
+.faq-item:last-child{border-bottom:1px solid var(--line);}
+.faq-item h3{font-family:var(--sans);font-size:1.02rem;color:var(--ink);font-weight:600;margin-bottom:10px;}
+.faq-item p{color:var(--ink-soft);font-size:0.96rem;max-width:60ch;}
+
+/* ---- Footer ---- */
+footer{background:var(--plum-ink);color:#D9C4D0;padding:64px 0 30px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;}
+footer h4{color:var(--white);font-family:var(--sans);font-size:0.9rem;margin-bottom:16px;font-weight:600;}
+footer a{color:#D9C4D0;text-decoration:none;font-size:0.9rem;display:block;margin-bottom:10px;}
+footer a:hover{color:var(--white);}
+.footer-bottom{max-width:var(--maxw);margin:44px auto 0;padding:22px 32px 0;border-top:1px solid rgba(255,255,255,0.14);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.8rem;color:#B79AAC;}
+
+.wa-float{position:fixed;right:26px;bottom:26px;z-index:80;width:54px;height:54px;border-radius:50%;
+  background:#2E6B3E;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);}
+.wa-float svg{width:24px;height:24px;}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(max-width:920px){
+  .contact-grid,.direct-grid,.footer-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  nav{position:fixed;top:73px;left:0;right:0;bottom:0;background:var(--cream);flex-direction:column;
+    align-items:flex-start;padding:30px 32px;display:none;gap:22px;overflow:auto;}
+  nav.open{display:flex;}
+  .nav-toggle{display:block;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a href="index.html" class="wordmark">ForHer<em>Wellbeing</em></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Dr. Raga</a>
+      <a href="programs.html">Programs</a>
+      <a href="women-abroad.html">Women Abroad</a>
+      <a href="results.html">Results</a>
+      <a href="contact.html" class="cta">Book Discovery Call</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker reveal">Get in touch</p>
+    <h1 class="reveal">Let&rsquo;s find your root cause together.</h1>
+    <p class="lede reveal">Book a 1:1 Discovery Call with Dr. Raga, or send an inquiry and we&rsquo;ll get back to you within 24 hours.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container contact-grid">
+    <div class="booking-card reveal">
+      <div class="tag">45-minute &middot; 1:1 &middot; Video call</div>
+      <h2>Discovery Call</h2>
+      <div class="price">&#8377;1,000</div>
+      <p class="desc">A focused conversation with Dr. Raga to understand your history, symptoms and goals, and recommend the right program for you.</p>
+      <ul>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> 1:1 with Dr. Raga, not a sales call</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Personalized program recommendation</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Fee adjusted against program cost if you enrol</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Available for clients in India and abroad</li>
+      </ul>
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" data-buy="discovery-call">Pay &#8377;1,000 &amp; book</button>
+        <a href="https://wa.me/918008383699" class="btn btn-outline" target="_blank" rel="noopener">Book on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <form class="inquiry" id="inquiryForm">
+        <div class="field" style="position:absolute;left:-9999px;" aria-hidden="true">
+          <label for="hp_field">Leave this field empty</label>
+          <input type="text" id="hp_field" name="hp_field" tabindex="-1" autocomplete="new-password">
+        </div>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <div class="verify-row">
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <button type="button" class="btn btn-secondary" id="sendCodeBtn">Verify email</button>
+          </div>
+          <div class="verify-box" id="verifyBox" hidden>
+            <label for="emailCode">Enter the 6-digit code we emailed you</label>
+            <div class="verify-row">
+              <input type="text" id="emailCode" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="123456">
+              <button type="button" class="btn btn-secondary" id="checkCodeBtn">Confirm</button>
+            </div>
+          </div>
+          <p class="verify-status" id="verifyStatus" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="phone">Phone / WhatsApp number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="field">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option>Discovery Call</option>
+            <option>Yoga</option>
+            <option>Diet Coaching</option>
+            <option>Gut Metabolism Reset</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Tell us a little about what you're looking for</label>
+          <textarea id="message" name="message" placeholder="Symptoms, goals, or questions you have..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Send inquiry</button>
+        <p class="form-note">Please verify your email first so we can reach you. We typically respond within 24 hours.</p>
+        <div class="form-success" id="formSuccess">Thank you, your inquiry has been received. We'll be in touch within 24 hours.</div>
+        <div class="form-success" id="formError" style="border-color:#c0392b;color:#c0392b;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="direct-contact">
+  <div class="container">
+    <div class="direct-grid reveal">
+      <a class="direct-item" href="https://wa.me/918008383699" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#EADFE3"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.44 1.32 4.94L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.4 1.3-1.93 1.37-.5.07-1.1.1-1.78-.11-.41-.13-.94-.3-1.61-.6-2.85-1.23-4.7-4.1-4.84-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.28.58-.35.77-.35h.55c.18 0 .42-.03.65.5.25.6.85 2.08.92 2.23.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.44.5-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.13.63-.08.17-.21.72-.84.92-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.94.92.28.14.47.21.53.33.07.12.07.68-.17 1.36Z"/></svg>
+        <div><h3>WhatsApp</h3><p>+91 8008383699</p></div>
+      </a>
+      <div class="direct-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EADFE3" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <div><h3>Email</h3><p>hello@forherwellbeing.com</p></div>
+      </div>
+      <div class="direct-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EADFE3" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15.5 14.5"/></svg>
+        <div><h3>Response time</h3><p>Within 24 hours, most days sooner</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="faq-head reveal">
+      <h2>Before you book</h2>
+    </div>
+    <div class="reveal">
+      <div class="faq-item">
+        <h3>What happens on the Discovery Call?</h3>
+        <p>Dr. Raga will ask about your symptoms, history and any labs you already have, then recommend whether Yoga, Diet Coaching or Gut Metabolism Reset is the right starting point for you.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you work with women outside India?</h3>
+        <p>Yes. All programs and the Discovery Call are available over video call to clients abroad; see the Women Abroad page for details specific to international clients.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the &#8377;1,000 call fee adjusted later?</h3>
+        <p>Yes, if you enrol in a paid program afterward, the Discovery Call fee is credited against your program cost.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I'm not sure which program I need?</h3>
+        <p>That's exactly what the Discovery Call is for. Select "Not sure yet" in the inquiry form, or mention it on WhatsApp, and Dr. Raga will help you decide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4 style="font-family:var(--serif);font-size:1.1rem;color:var(--white);">ForHerWellbeing</h4>
+      <p style="color:#C9B2C1;font-size:0.9rem;max-width:32ch;">Science-based holistic wellness for women, led by Dr. Raga Deepthi Ediga. PhD, Heidelberg University, IIT Bombay association.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="about.html">About Dr. Raga</a>
+      <a href="programs.html">Programs</a>
+      <a href="women-abroad.html">Women Abroad</a>
+      <a href="results.html">Results</a>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <a href="programs.html">Yoga: &#8377;2,500/mo</a>
+      <a href="programs.html">Diet Coaching: &#8377;30,000</a>
+      <a href="programs.html">Gut Metabolism Reset: &#8377;75,000+</a>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <a href="contact.html">Book Discovery Call</a>
+      <a href="https://wa.me/918008383699">WhatsApp: +91 8008383699</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 ForHerWellbeing. All rights reserved.</span>
+    <span>Serving clients across India, and abroad</span>
+  </div>
+</footer>
+
+
+<script src="js/social.js"></script>
+<script src="js/checkout.js"></script>
+
+<script>
+document.querySelectorAll('nav a').forEach(function(l){
+  l.addEventListener('click', function(){ document.querySelector('nav').classList.remove('open'); });
+});
+var els = document.querySelectorAll('.reveal');
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.15});
+els.forEach(function(el){ io.observe(el); });
+
+var inquiryForm = document.getElementById('inquiryForm');
+if (inquiryForm) {
+  var emailInput = document.getElementById('email');
+  var sendBtn = document.getElementById('sendCodeBtn');
+  var verifyBox = document.getElementById('verifyBox');
+  var codeInput = document.getElementById('emailCode');
+  var checkBtn = document.getElementById('checkCodeBtn');
+  var verifyStatus = document.getElementById('verifyStatus');
+  var submitBtn = document.getElementById('submitBtn');
+  var verificationToken = null;
+  var cooldownTimer = null;
+
+  function setStatus(msg, kind){
+    verifyStatus.textContent = msg || '';
+    verifyStatus.className = 'verify-status' + (kind ? ' ' + kind : '');
+  }
+  function updateSubmitState(){ submitBtn.disabled = !verificationToken; }
+  function postJSON(url, payload){
+    return fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function(res){ return res.json().then(function(body){ return { ok: res.ok && body.ok, body: body }; }); });
+  }
+  function startCooldown(seconds){
+    clearTimeout(cooldownTimer);
+    var left = seconds;
+    sendBtn.disabled = true;
+    (function tick(){
+      if (left <= 0) { sendBtn.disabled = false; sendBtn.textContent = 'Resend code'; return; }
+      sendBtn.textContent = 'Resend in ' + left + 's';
+      left -= 1;
+      cooldownTimer = setTimeout(tick, 1000);
+    })();
+  }
+  function resetVerification(){
+    clearTimeout(cooldownTimer);
+    verificationToken = null;
+    verifyBox.hidden = true;
+    codeInput.value = '';
+    sendBtn.disabled = false;
+    sendBtn.textContent = 'Verify email';
+    setStatus('');
+    updateSubmitState();
+  }
+
+  // Changing the email after sending/verifying means starting over
+  emailInput.addEventListener('input', function(){
+    if (verificationToken || !verifyBox.hidden || sendBtn.disabled) resetVerification();
+  });
+
+  sendBtn.addEventListener('click', function(){
+    var email = emailInput.value.trim();
+    if (!emailInput.checkValidity() || !email) {
+      setStatus('Please enter a valid email address first.', 'err');
+      return;
+    }
+    setStatus('Sending code...');
+    sendBtn.disabled = true;
+    postJSON('/api/verify-email/send', { email: email })
+      .then(function(result){
+        if (result.ok) {
+          verifyBox.hidden = false;
+          codeInput.focus();
+          setStatus('We sent a 6-digit code to ' + email + '. It expires in ' + result.body.expiresInMinutes + ' minutes.');
+          startCooldown(result.body.resendAfterSeconds || 60);
+        } else {
+          setStatus((result.body && result.body.error) || 'Could not send the code. Please try again.', 'err');
+          sendBtn.disabled = false;
+        }
+      })
+      .catch(function(){
+        setStatus('Could not reach the server. Please check your connection and try again.', 'err');
+        sendBtn.disabled = false;
+      });
+  });
+
+  checkBtn.addEventListener('click', function(){
+    var code = codeInput.value.trim();
+    if (!/^\d{6}$/.test(code)) {
+      setStatus('Please enter the 6-digit code.', 'err');
+      return;
+    }
+    checkBtn.disabled = true;
+    postJSON('/api/verify-email/check', { email: emailInput.value.trim(), code: code })
+      .then(function(result){
+        if (result.ok) {
+          verificationToken = result.body.token;
+          verifyBox.hidden = true;
+          clearTimeout(cooldownTimer);
+          sendBtn.disabled = true;
+          sendBtn.textContent = 'Verified \u2713';
+          setStatus('Email verified. You can now send your inquiry.', 'ok');
+          updateSubmitState();
+        } else {
+          setStatus((result.body && result.body.error) || 'Could not verify the code.', 'err');
+        }
+      })
+      .catch(function(){ setStatus('Could not reach the server. Please try again.', 'err'); })
+      .finally(function(){ checkBtn.disabled = false; });
+  });
+
+  inquiryForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    var successEl = document.getElementById('formSuccess');
+    var errorEl = document.getElementById('formError');
+
+    successEl.classList.remove('show');
+    errorEl.classList.remove('show');
+    errorEl.textContent = '';
+
+    if (!verificationToken) {
+      errorEl.textContent = 'Please verify your email address before sending your inquiry.';
+      errorEl.classList.add('show');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    var originalLabel = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+
+    var data = Object.fromEntries(new FormData(inquiryForm).entries());
+    data.verificationToken = verificationToken;
+
+    postJSON('/api/contact', data)
+      .then(function(result){
+        if (result.ok) {
+          successEl.classList.add('show');
+          inquiryForm.reset();
+          resetVerification();
+        } else {
+          errorEl.textContent = (result.body && result.body.error) || 'Something went wrong. Please try again.';
+          errorEl.classList.add('show');
+          // The token is single-use, so if the server refused it the visitor must verify again
+          if (result.body && /verify your email/i.test(result.body.error || '')) resetVerification();
+        }
+      })
+      .catch(function(){
+        errorEl.textContent = 'Could not reach the server. Please check your connection and try again.';
+        errorEl.classList.add('show');
+      })
+      .finally(function(){
+        submitBtn.textContent = originalLabel;
+        updateSubmitState();
+      });
+  });
+}
+</script>
+</body>
+</html>

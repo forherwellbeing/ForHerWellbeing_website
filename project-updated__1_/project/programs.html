@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs | ForHerWellbeing</title>
+<meta name="description" content="Yoga, Diet Coaching and Gut Metabolism Reset: three root-cause wellness programs for women, led by Dr. Raga Deepthi Ediga.">
+<style>
+:root{
+  --plum:#3B1530;
+  --plum-ink:#26101F;
+  --plum-mid:#6C3159;
+  --plum-soft:#EADFE3;
+  --cream:#F6EFE1;
+  --white:#FFFFFF;
+  --ink:#2A2621;
+  --ink-soft:#6B655C;
+  --line:#DED0C0;
+  --serif:'Iowan Old Style','Palatino Linotype', Georgia, 'Times New Roman', serif;
+  --sans:-apple-system, BlinkMacSystemFont,'Segoe UI', Helvetica, Arial, sans-serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+h1,h2,h3{font-family:var(--serif);color:var(--plum);margin:0;font-weight:400;letter-spacing:-0.01em;}
+p{margin:0;}
+
+header{position:sticky;top:0;z-index:50;background:rgba(246,239,225,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:var(--maxw);margin:0 auto;}
+.wordmark{font-family:var(--serif);font-size:1.3rem;color:var(--plum);text-decoration:none;}
+.wordmark em{font-style:normal;color:var(--plum-mid);}
+nav{display:flex;align-items:center;gap:34px;}
+nav a{font-size:0.92rem;text-decoration:none;color:var(--ink);position:relative;padding:4px 0;}
+nav a:not(.cta):after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--plum);transition:width .25s ease;}
+nav a:not(.cta):hover:after,nav a.active:after{width:100%;}
+.cta{background:var(--plum);color:var(--white)!important;padding:11px 22px;border-radius:2px;font-size:0.88rem;text-decoration:none;}
+.cta:hover{background:var(--plum-mid);}
+.nav-toggle{display:none;background:none;border:0;font-size:1.4rem;color:var(--plum);}
+
+/* ---- Hero ---- */
+.page-hero{background:var(--cream);padding:90px 0 76px;text-align:center;}
+.page-hero p.kicker{font-size:0.95rem;color:var(--plum-mid);margin-bottom:18px;}
+.page-hero h1{font-size:clamp(2.3rem,4.2vw,3.6rem);max-width:18ch;margin:0 auto;line-height:1.1;}
+.page-hero .lede{margin:22px auto 0;font-size:1.1rem;color:var(--ink-soft);max-width:52ch;}
+
+/* ---- Detailed program blocks ---- */
+.program-detail{padding:100px 0;border-bottom:1px solid var(--line);}
+.program-detail:last-of-type{border-bottom:none;}
+.pd-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:start;}
+.pd-side{position:sticky;top:110px;}
+.pd-side .tag{font-size:0.8rem;color:var(--ink-soft);margin-bottom:16px;}
+.pd-side h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:14px;}
+.pd-side .price{font-family:var(--serif);color:var(--plum);font-size:1.7rem;margin-bottom:22px;}
+.pd-side .price span{font-size:1rem;color:var(--ink-soft);}
+.pd-body p{color:var(--ink-soft);font-size:1.05rem;max-width:56ch;margin-bottom:22px;}
+.pd-body p:last-child{margin-bottom:0;}
+.pd-body strong{color:var(--plum);font-weight:600;}
+.pd-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px;}
+.pd-list li{display:flex;gap:12px;font-size:0.98rem;color:var(--ink);align-items:flex-start;}
+.pd-list li svg{flex-shrink:0;margin-top:3px;}
+
+/* ---- Comparison strip ---- */
+.compare{background:var(--plum-ink);color:var(--white);padding:90px 0;}
+.compare-head{max-width:60ch;margin-bottom:50px;}
+.compare-head h2{color:var(--white);font-size:clamp(1.8rem,3vw,2.4rem);}
+table.compare-table{width:100%;border-collapse:collapse;}
+.compare-table th,.compare-table td{text-align:left;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.14);font-size:0.94rem;}
+.compare-table th{color:#C9B2C1;font-weight:600;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.04em;}
+.compare-table td:first-child,.compare-table th:first-child{color:var(--white);font-family:var(--serif);font-size:1.05rem;}
+.compare-table td{color:#D9C4D0;}
+
+/* ---- CTA ---- */
+.final-cta{padding:120px 0;text-align:center;background:var(--cream);}
+.final-cta h2{font-size:clamp(2rem,4vw,2.9rem);max-width:18ch;margin:0 auto 22px;}
+.final-cta p{color:var(--ink-soft);max-width:44ch;margin:0 auto 36px;font-size:1.05rem;}
+.btn{display:inline-block;padding:15px 30px;border-radius:2px;text-decoration:none;font-size:0.96rem;font-weight:600;}
+.btn-primary{background:var(--plum);color:var(--white);}
+.btn-primary:hover{background:var(--plum-mid);}
+
+/* ---- Footer ---- */
+footer{background:var(--plum-ink);color:#D9C4D0;padding:64px 0 30px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;}
+footer h4{color:var(--white);font-family:var(--sans);font-size:0.9rem;margin-bottom:16px;font-weight:600;}
+footer a{color:#D9C4D0;text-decoration:none;font-size:0.9rem;display:block;margin-bottom:10px;}
+footer a:hover{color:var(--white);}
+.footer-bottom{max-width:var(--maxw);margin:44px auto 0;padding:22px 32px 0;border-top:1px solid rgba(255,255,255,0.14);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.8rem;color:#B79AAC;}
+
+.wa-float{position:fixed;right:26px;bottom:26px;z-index:80;width:54px;height:54px;border-radius:50%;
+  background:#2E6B3E;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);}
+.wa-float svg{width:24px;height:24px;}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(max-width:920px){
+  .pd-grid,.footer-grid{grid-template-columns:1fr;}
+  .pd-side{position:static;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .compare-table{font-size:0.85rem;}
+  nav{position:fixed;top:73px;left:0;right:0;bottom:0;background:var(--cream);flex-direction:column;
+    align-items:flex-start;padding:30px 32px;display:none;gap:22px;overflow:auto;}
+  nav.open{display:flex;}
+  .nav-toggle{display:block;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a href="index.html" class="wordmark">ForHer<em>Wellbeing</em></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Dr. Raga</a>
+      <a href="programs.html" class="active">Programs</a>
+      <a href="women-abroad.html">Women Abroad</a>
+      <a href="results.html">Results</a>
+      <a href="contact.html" class="cta">Book Discovery Call</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker reveal">Programs</p>
+    <h1 class="reveal">Three focused paths to your root cause.</h1>
+    <p class="lede reveal">Every program starts with understanding your biochemistry, gut and hormones, not with a generic template.</p>
+  </div>
+</section>
+
+<section class="program-detail">
+  <div class="container pd-grid">
+    <div class="pd-side reveal">
+      <div class="tag">Ongoing &middot; Group</div>
+      <h2>Yoga</h2>
+      <div class="price">&#8377;2,500<span>/mo</span></div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" data-buy="yoga" style="padding:13px 24px;font-size:0.9rem;">Buy now</button>
+        <a href="contact.html" class="btn btn-outline" style="padding:13px 24px;font-size:0.9rem;">Ask about batches</a>
+      </div>
+    </div>
+    <div class="pd-body reveal">
+      <p>Morning yoga batches designed specifically around <strong>women&rsquo;s hormonal wellbeing</strong>: cycle-aware sequencing, breathwork for the nervous system, and postures chosen to support thyroid and reproductive health rather than generic fitness goals.</p>
+      <p>Small group format, led live, with modifications offered depending on where you are in your cycle or with your condition (PCOS, thyroid, or postpartum).</p>
+      <ul class="pd-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Live morning batches, small groups</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Cycle-aware sequencing and breathwork</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Modifications for PCOS, thyroid and postpartum</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Monthly billing, cancel anytime</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="program-detail">
+  <div class="container pd-grid">
+    <div class="pd-side reveal">
+      <div class="tag">One-time programme &middot; 1:1</div>
+      <h2>Diet Coaching</h2>
+      <div class="price">&#8377;30,000</div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" data-buy="diet-coaching" style="padding:13px 24px;font-size:0.9rem;">Buy now</button>
+        <a href="contact.html" class="btn btn-outline" style="padding:13px 24px;font-size:0.9rem;">Start with a Discovery Call</a>
+      </div>
+    </div>
+    <div class="pd-body reveal">
+      <p>Personalized nutrition and lifestyle guidance built around <strong>your</strong> labs, symptoms and history, not a fixed meal plan. Includes an initial biochemistry review, a tailored eating protocol, and ongoing 1:1 check-ins as your body responds.</p>
+      <p>This is the program behind results like regulated cycles without medication: real dietary root-cause work, not calorie counting.</p>
+      <ul class="pd-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Initial biochemistry and symptom review</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Personalized nutrition protocol</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Ongoing 1:1 check-ins and adjustments</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Direct access to Dr. Raga throughout</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="program-detail">
+  <div class="container pd-grid">
+    <div class="pd-side reveal">
+      <div class="tag">Flagship &middot; Premium</div>
+      <h2>Gut Metabolism Reset</h2>
+      <div class="price">&#8377;75,000+</div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" data-buy="gut-metabolism-reset" style="padding:13px 24px;font-size:0.9rem;">Buy now</button>
+        <a href="contact.html" class="btn btn-outline" style="padding:13px 24px;font-size:0.9rem;">Start with a Discovery Call</a>
+      </div>
+    </div>
+    <div class="pd-body reveal">
+      <p>The deepest level of root-cause investigation ForHerWellbeing offers, combining <strong>microbiome sequencing</strong> with full biochemical panels to map exactly how your gut is driving hormonal and metabolic symptoms.</p>
+      <p>Built for women who have tried diet and lifestyle changes without lasting results, and need to understand what&rsquo;s actually happening at the microbial and metabolic level.</p>
+      <ul class="pd-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Microbiome sequencing and lab analysis</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Full biochemical and metabolic panel review</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Personalized reset protocol, gut-first</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1530" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg> Includes diet coaching throughout the reset</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="compare">
+  <div class="container">
+    <div class="compare-head reveal">
+      <h2>Which program is right for you?</h2>
+    </div>
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr><th>Program</th><th>Format</th><th>Best for</th><th>Investment</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Yoga</td><td>Live group, monthly</td><td>Ongoing movement &amp; nervous system support</td><td>&#8377;2,500/mo</td></tr>
+          <tr><td>Diet Coaching</td><td>1:1, single programme</td><td>Root-cause nutrition, cycle &amp; symptom relief</td><td>&#8377;30,000</td></tr>
+          <tr><td>Gut Metabolism Reset</td><td>1:1, premium, includes labs</td><td>Deep investigation when other approaches haven&rsquo;t worked</td><td>&#8377;75,000+</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2 class="reveal">Not sure which one fits?</h2>
+    <p class="reveal">Start with a 45-minute 1:1 Discovery Call and Dr. Raga will recommend the right path.</p>
+    <div class="btn-row reveal" style="justify-content:center;">
+      <a href="contact.html" class="btn btn-primary">Book Discovery Call: &#8377;1,000</a>
+      <button type="button" class="btn btn-outline" data-buy="discovery-call">Pay &#8377;1,000 now</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4 style="font-family:var(--serif);font-size:1.1rem;color:var(--white);">ForHerWellbeing</h4>
+      <p style="color:#C9B2C1;font-size:0.9rem;max-width:32ch;">Science-based holistic wellness for women, led by Dr. Raga Deepthi Ediga. PhD, Heidelberg University, IIT Bombay association.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="about.html">About Dr. Raga</a>
+      <a href="programs.html">Programs</a>
+      <a href="women-abroad.html">Women Abroad</a>
+      <a href="results.html">Results</a>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <a href="programs.html">Yoga: &#8377;2,500/mo</a>
+      <a href="programs.html">Diet Coaching: &#8377;30,000</a>
+      <a href="programs.html">Gut Metabolism Reset: &#8377;75,000+</a>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <a href="contact.html">Book Discovery Call</a>
+      <a href="https://wa.me/918008383699">WhatsApp: +91 8008383699</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 ForHerWellbeing. All rights reserved.</span>
+    <span>Serving clients across India, and abroad</span>
+  </div>
+</footer>
+
+
+<script src="js/social.js"></script>
+<script src="js/checkout.js"></script>
+
+<script>
+document.querySelectorAll('nav a').forEach(function(l){
+  l.addEventListener('click', function(){ document.querySelector('nav').classList.remove('open'); });
+});
+var els = document.querySelectorAll('.reveal');
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.15});
+els.forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>

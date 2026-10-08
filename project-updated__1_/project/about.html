@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Dr. Raga Deepthi | ForHerWellbeing</title>
+<meta name="description" content="PhD from Heidelberg University, 11 years in Germany. Meet Dr. Raga Deepthi Ediga.">
+<style>
+:root{
+  --plum:#3B1530;
+  --plum-ink:#26101F;
+  --plum-mid:#6C3159;
+  --plum-soft:#EADFE3;
+  --cream:#F6EFE1;
+  --white:#FFFFFF;
+  --ink:#2A2621;
+  --ink-soft:#6B655C;
+  --line:#DED0C0;
+  --serif:'Iowan Old Style','Palatino Linotype', Georgia, 'Times New Roman', serif;
+  --sans:-apple-system, BlinkMacSystemFont,'Segoe UI', Helvetica, Arial, sans-serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+h1,h2,h3{font-family:var(--serif);color:var(--plum);margin:0;font-weight:400;letter-spacing:-0.01em;}
+p{margin:0;}
+
+header{position:sticky;top:0;z-index:50;background:rgba(246,239,225,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:var(--maxw);margin:0 auto;}
+.wordmark{font-family:var(--serif);font-size:1.3rem;color:var(--plum);text-decoration:none;}
+.wordmark em{font-style:normal;color:var(--plum-mid);}
+nav{display:flex;align-items:center;gap:34px;}
+nav a{font-size:0.92rem;text-decoration:none;color:var(--ink);position:relative;padding:4px 0;}
+nav a:not(.cta):after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--plum);transition:width .25s ease;}
+nav a:not(.cta):hover:after,nav a.active:after{width:100%;}
+.cta{background:var(--plum);color:var(--white)!important;padding:11px 22px;border-radius:2px;font-size:0.88rem;text-decoration:none;}
+.cta:hover{background:var(--plum-mid);}
+.nav-toggle{display:none;background:none;border:0;font-size:1.4rem;color:var(--plum);}
+
+/* ---- Page hero ---- */
+.about-hero{background:var(--cream);padding:90px 0 80px;position:relative;overflow:hidden;}
+.about-hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;}
+.about-hero p.kicker{font-size:0.95rem;color:var(--plum-mid);margin-bottom:20px;}
+.about-hero h1{font-size:clamp(2.3rem,4.2vw,3.6rem);max-width:11ch;line-height:1.08;}
+.about-hero .lede{margin-top:22px;font-size:1.1rem;color:var(--ink-soft);max-width:40ch;}
+.portrait-frame{
+  border:1px solid var(--line);background:var(--white);aspect-ratio:4/5;
+  display:flex;align-items:center;justify-content:center;position:relative;
+}
+.portrait-frame svg{width:64%;}
+.portrait-cap{position:absolute;bottom:0;left:0;right:0;background:var(--plum);color:var(--white);
+  padding:14px 18px;font-size:0.85rem;}
+
+/* ---- Narrative ---- */
+.narrative{padding:100px 0;}
+.narrative-grid{display:grid;grid-template-columns:0.55fr 1.45fr;gap:64px;}
+.narrative-label{font-size:0.9rem;color:var(--ink-soft);position:sticky;top:110px;align-self:start;}
+.narrative-body p{font-family:var(--serif);font-size:1.28rem;line-height:1.6;color:var(--ink);max-width:56ch;margin-bottom:26px;}
+.narrative-body p:last-child{margin-bottom:0;}
+.narrative-body strong{color:var(--plum);font-weight:600;}
+
+/* ---- Credentials strip ---- */
+.credentials-strip{background:var(--plum-ink);color:var(--white);padding:90px 0;}
+.credentials-head{max-width:60ch;margin-bottom:50px;}
+.credentials-head h2{color:var(--white);font-size:clamp(1.8rem,3vw,2.4rem);}
+.cred-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.14);}
+.cred{background:var(--plum-ink);padding:30px 30px;display:flex;gap:18px;align-items:flex-start;}
+.cred svg{flex-shrink:0;margin-top:4px;}
+.cred h3{color:var(--white);font-size:1.08rem;margin-bottom:6px;}
+.cred p{color:#C9B2C1;font-size:0.92rem;}
+
+/* ---- Pull quote ---- */
+.pullquote{padding:110px 0;text-align:center;}
+.pullquote p{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.3rem);color:var(--plum);max-width:26ch;margin:0 auto;line-height:1.45;}
+.pullquote .attr{margin-top:24px;font-size:0.9rem;color:var(--ink-soft);font-family:var(--sans);}
+
+/* ---- CTA ---- */
+.about-cta{background:var(--cream);padding:90px 0;text-align:center;}
+.about-cta h2{font-size:clamp(1.9rem,3.4vw,2.5rem);max-width:16ch;margin:0 auto 14px;}
+.about-cta p{color:var(--ink-soft);max-width:42ch;margin:0 auto 32px;}
+.btn{display:inline-block;padding:15px 30px;border-radius:2px;text-decoration:none;font-size:0.96rem;font-weight:600;}
+.btn-primary{background:var(--plum);color:var(--white);}
+.btn-primary:hover{background:var(--plum-mid);}
+
+/* ---- Footer ---- */
+footer{background:var(--plum-ink);color:#D9C4D0;padding:64px 0 30px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;}
+footer h4{color:var(--white);font-family:var(--sans);font-size:0.9rem;margin-bottom:16px;font-weight:600;}
+footer a{color:#D9C4D0;text-decoration:none;font-size:0.9rem;display:block;margin-bottom:10px;}
+footer a:hover{color:var(--white);}
+.footer-bottom{max-width:var(--maxw);margin:44px auto 0;padding:22px 32px 0;border-top:1px solid rgba(255,255,255,0.14);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.8rem;color:#B79AAC;}
+
+.wa-float{position:fixed;right:26px;bottom:26px;z-index:80;width:54px;height:54px;border-radius:50%;
+  background:#2E6B3E;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);}
+.wa-float svg{width:24px;height:24px;}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(max-width:920px){
+  .about-hero-grid,.narrative-grid,.cred-list{grid-template-columns:1fr;}
+  .narrative-label{position:static;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  nav{position:fixed;top:73px;left:0;right:0;bottom:0;background:var(--cream);flex-direction:column;
+    align-items:flex-start;padding:30px 32px;display:none;gap:22px;overflow:auto;}
+  nav.open{display:flex;}
+  .nav-toggle{display:block;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a href="index.html" class="wordmark">ForHer<em>Wellbeing</em></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Dr. Raga</a>
+      <a href="programs.html">Programs</a>
+      <a href="women-abroad.html">Women Abroad</a>
+      <a href="results.html">Results</a>
+      <a href="contact.html" class="cta">Book Discovery Call</a>
+    </nav>
+  </div>
+</header>
+
+<section class="about-hero">
+  <div class="container about-hero-grid">
+    <div>
+      <p class="kicker reveal">About Dr. Raga</p>
+      <h1 class="reveal">A scientist who has also lived the struggle.</h1>
+      <p class="lede reveal">Not a distant expert. Not a lifestyle influencer. A researcher who built her method the same way she once had to find her own answers.</p>
+    </div>
+    <div class="portrait-frame reveal">
+      <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#3B1530" stroke-width="1.3">
+          <circle cx="100" cy="80" r="46"/>
+          <path d="M40 220 C 40 150, 60 120, 100 120 C 140 120, 160 150, 160 220" />
+          <path d="M64 70 C 64 45, 82 30, 100 30 C 118 30, 136 45, 136 70" opacity="0.6"/>
+        </g>
+      </svg>
+      <div class="portrait-cap">Dr. Raga Deepthi </div>
+    </div>
+  </div>
+</section>
+
+<section class="narrative">
+  <div class="container narrative-grid">
+    <div class="narrative-label reveal">From the lab<br>to the clinic</div>
+    <div class="narrative-body reveal">
+      <p>Dr. Raga Deepthi holds a <strong>PhD from Heidelberg University</strong> and carries an <strong>IIT Bombay association</strong>, built over <strong>11 years of professional experience in Germany</strong> working at the intersection of biochemistry and human health.</p>
+      <p>Her approach to women&rsquo;s wellness didn&rsquo;t start in a classroom. It started with her own experience navigating an autoimmune condition: the confusion of symptoms that didn&rsquo;t add up, the frustration of generic advice that didn&rsquo;t work, and the eventual relief of finally understanding what her own body was telling her.</p>
+      <p>That experience is why ForHerWellbeing exists. To give other women the same rigorous, root-cause investigation she once had to find for herself, grounded in science and delivered with the understanding of someone who has actually been there.</p>
+    </div>
+  </div>
+</section>
+
+<section class="credentials-strip">
+  <div class="container">
+    <div class="credentials-head reveal">
+      <h2>Credentials</h2>
+    </div>
+    <div class="cred-list reveal">
+      <div class="cred">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EADFE3" stroke-width="1.4"><path d="M12 3 L22 8 L12 13 L2 8 Z"/><path d="M6 10.5 V16 C6 18 9 19.5 12 19.5 C15 19.5 18 18 18 16 V10.5"/></svg>
+        <div><h3>PhD, Heidelberg University</h3><p>Doctoral research in biochemistry and human health.</p></div>
+      </div>
+      <div class="cred">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EADFE3" stroke-width="1.4"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M8 9 V5 h8 v4"/></svg>
+        <div><h3>IIT Bombay association</h3><p>Continued connection to India&rsquo;s scientific research community.</p></div>
+      </div>
+      <div class="cred">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EADFE3" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15.5 14.5"/></svg>
+        <div><h3>11 years in Germany</h3><p>Professional clinical and research experience.</p></div>
+      </div>
+      <div class="cred">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EADFE3" stroke-width="1.4"><path d="M12 20 C 12 20, 4 14.5, 4 8.8 C 4 5.6, 6.5 3.5, 9.2 3.5 C 10.8 3.5, 12 4.4, 12 4.4 C 12 4.4, 13.2 3.5, 14.8 3.5 C 17.5 3.5, 20 5.6, 20 8.8 C 20 14.5, 12 20, 12 20 Z"/></svg>
+        <div><h3>150+ women treated</h3><p>Across Yoga, Diet Coaching and Gut Metabolism Reset.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pullquote">
+  <div class="container">
+    <p class="reveal">&ldquo;I built the process I wish someone had given me, when I was the one looking for answers.&rdquo;</p>
+    <p class="attr reveal">Dr. Raga Deepthi , Founder</p>
+  </div>
+</section>
+
+<section class="about-cta">
+  <div class="container">
+    <h2 class="reveal">Work with Dr. Raga Deepthi directly</h2>
+    <p class="reveal">Start with a 45-minute 1:1 Discovery Call.</p>
+    <a href="contact.html" class="btn btn-primary reveal">Book Discovery Call</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4 style="font-family:var(--serif);font-size:1.1rem;color:var(--white);">ForHerWellbeing</h4>
+      <p style="color:#C9B2C1;font-size:0.9rem;max-width:32ch;">Science-based holistic wellness for women, led by Dr. Raga Deepthi Ediga. PhD, Heidelberg University, IIT Bombay association.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="about.html">About Dr. Raga Deepthi</a>
+      <a href="programs.html">Programs</a>
+      <a href="women-abroad.html">Women Abroad</a>
+      <a href="results.html">Results</a>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <a href="programs.html">Yoga: &#8377;2,500/mo</a>
+      <a href="programs.html">Diet Coaching: &#8377;30,000</a>
+      <a href="programs.html">Gut Metabolism Reset: &#8377;75,000+</a>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <a href="contact.html">Book Discovery Call</a>
+      <a href="https://wa.me/918008383699">WhatsApp: +91 8008383699</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 ForHerWellbeing. All rights reserved.</span>
+    <span>Serving clients across India, and abroad</span>
+  </div>
+</footer>
+
+
+<script src="js/social.js"></script>
+
+<script>
+document.querySelectorAll('nav a').forEach(function(l){
+  l.addEventListener('click', function(){ document.querySelector('nav').classList.remove('open'); });
+});
+var els = document.querySelectorAll('.reveal');
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.15});
+els.forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
